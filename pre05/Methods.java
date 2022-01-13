@@ -4,11 +4,11 @@ import java.util.*;
 public class Methods {
 
   public static void main(String args[]){}
-  
+
   /* exercise 2 */
   public static boolean isDivisible(int n, int m) {
     if (m == 0) {
-      System.out.println("Cannot divide by zero");
+      System.err.println("Cannot divide by zero");
       return false;
     } else {
       return n % m == 0;
