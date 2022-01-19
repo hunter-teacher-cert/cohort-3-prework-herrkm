@@ -13,11 +13,6 @@ public class Sieve {
     for (int i = 0; i <= n; i++){
       numberList[i] = i;
     }
-    int maxValue = (int) Math.floor(Math.sqrt(n));
-    int[] values = new int[maxValue + 1]; //must add 1 since values start at 0
-    for(int i = 0; i < values.length; i++){
-      values[i] = i;
-    } //make an array of composite-generating integers between 0 and sqrt(n) inclusive
     boolean[] primes = new boolean[n + 1];
     for (int i = 0; i < primes.length; i++){
       if (i < 2){
@@ -26,12 +21,15 @@ public class Sieve {
         primes[i] = true;
       }
     } //fill a boolean array with truth values for 0-n, marking 0 and 1 as false
-    for (int i = 0; i < values.length; i++){
+
+    int maxValue = (int) Math.floor(Math.sqrt(n)); //max prime-generating value is sqrt(n) truncated
+
+    for (int i = 0; i < maxValue+1; i++){
       if (primes[i] == true){
-        int comp = values[i]*values[i];
+        int comp = numberList[i]*numberList[i];
         while (comp <= n){
           primes[comp] = false;
-          comp = comp + values[i];
+          comp = comp + numberList[i];
         }
       }
     }
