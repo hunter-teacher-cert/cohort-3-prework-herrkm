@@ -3,7 +3,11 @@ import java.util.*;
 
 public class Methods {
 
-  public static void main(String args[]){}
+  public static void main(String args[]){
+    System.out.println(isDivisible(6,2));
+    System.out.println(isTriangle(3, 8, 3));
+    System.out.println(ack(2, 2));
+  }
 
   /* exercise 2 */
   public static boolean isDivisible(int n, int m) {
