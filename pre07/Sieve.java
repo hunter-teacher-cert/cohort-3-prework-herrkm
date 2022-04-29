@@ -22,7 +22,7 @@ public class Sieve {
       }
     } //fill a boolean array with truth values for 0-n, marking 0 and 1 as false
 
-    int maxValue = (int) Math.floor(Math.sqrt(n)); //max prime-generating value is sqrt(n) truncated
+    int maxValue = (int) Math.floor(Math.sqrt(n)); //max composite-generating value is sqrt(n) truncated
 
     for (int i = 0; i < maxValue+1; i++){
       if (primes[i] == true){
