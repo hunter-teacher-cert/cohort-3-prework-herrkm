@@ -43,12 +43,4 @@ public class Array {
     }
     System.out.println("}");
   }
-
-  public static void printArray(int x[]){
-    System.out.print("{  ");
-    for(int x1 : x){
-      System.out.print(x1 + "  ");
-    }
-    System.out.println("}");
-  }
 }

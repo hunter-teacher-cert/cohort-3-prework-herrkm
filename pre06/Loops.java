@@ -23,7 +23,7 @@ public class Loops {
 
   /* exercise 3 */
   public static double power(double x, int n){
-    double value = x;
+    double value = 1;
     for (int i = 1; i <= n; i++){
       value = value*x;
     }
